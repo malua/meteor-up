@@ -2,7 +2,7 @@ import './node-version';
 import './nodemiral';
 import modules, { loadPlugins, locatePluginDir } from './load-plugins';
 import chalk from 'chalk';
-import checkUpdates from './updates';
+// import checkUpdates from './updates';
 import { filterArgv } from './utils';
 import MupAPI from './plugin-api';
 import pkg from '../package.json';
@@ -27,8 +27,8 @@ function addModuleCommands(builder, module, moduleName) {
 
 function commandWrapper(pluginName, commandName) {
   return function() {
-    checkUpdates()
-      .then(() => {
+    // checkUpdates()
+      // .then(() => {
         const rawArgv = process.argv.slice(2);
         const filteredArgv = filterArgv(rawArgv, yargs.argv, unwantedArgvs);
         const api = new MupAPI(process.cwd(), filteredArgv, yargs.argv);
@@ -43,10 +43,10 @@ function commandWrapper(pluginName, commandName) {
         if (potentialPromise && typeof potentialPromise.then === 'function') {
           potentialPromise.catch(api._commandErrorHandler);
         }
-      })
-      .catch(e => {
-        console.error(e);
-      });
+      // })
+      // .catch(e => {
+        // console.error(e);
+      // });
   };
 }
 

@@ -1,5 +1,5 @@
 {
-  "name": "malua-mup-fork",
+  "name": "mup-cent-os-fork",
   "version": "1.4.6",
   "description": "Production Quality Meteor Deployments",
   "main": "lib/index.js",
