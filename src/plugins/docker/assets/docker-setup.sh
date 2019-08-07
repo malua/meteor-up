@@ -22,7 +22,7 @@ install_docker () {
     sudo rm -f /var/run/yum.pid > /dev/null
     sudo yum clean all > /dev/null
     set -e
-    sudo yum -y update
+    # sudo yum -y update
     sudo yum -y install wget lxc iptables curl redhat-lsb-core initscripts
     # Install docker
     wget -qO- https://get.docker.com/ | sudo sh
