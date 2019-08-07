@@ -1,6 +1,6 @@
 {
   "name": "mup-cent-os-fork",
-  "version": "1.4.8",
+  "version": "1.4.9",
   "description": "Production Quality Meteor Deployments",
   "main": "lib/index.js",
   "repository": {
